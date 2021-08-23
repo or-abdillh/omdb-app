@@ -2,15 +2,15 @@
   <h1>{{ msg }}</h1>
 
   <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
+    <a href="https://vitejs.dev/guide/features.html" >
       Vite Documentation
     </a>
     |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
+    <a href="https://v3.vuejs.org/" >Vue 3 Documentation</a>
   </p>
 
-  <button type="button" @click="state.count++">
-    count is: {{ state.count }}
+  <button type="button" @click="count++">
+    count is: {{ count }}
   </button>
   <p>
     Edit
@@ -18,14 +18,16 @@
   </p>
 </template>
 
-<script setup>
+<script>
 import { defineProps, reactive } from 'vue'
 
-defineProps({
-  msg: String
-})
-
-const state = reactive({ count: 0 })
+export default {
+   data() {
+      return {
+         count: 0
+      }
+   }
+}
 </script>
 
 <style scoped>
