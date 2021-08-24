@@ -1,8 +1,13 @@
 /*
    BACKGROUND 
 */
+
 $bg-primary: #181823;
 $bg-secondary: #3C434C;
+body {
+   min-height: 120vh;
+   background: $bg-primary;
+}
 
 /*
    TEXT & ICONS 

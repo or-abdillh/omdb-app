@@ -5,6 +5,10 @@
 @import './_fonts';
 @import './_variabels';
 
+@mixin padding-app {
+   padding: .5rem .85rem;
+}
+
 @mixin grid-centering {
    display: grid;
    place-items: center;

@@ -1,2 +1,147 @@
 @import '../_variabels';
 @import '../_mixins';
+
+#header-home {
+   width: 100%;
+   
+   .brand {
+      @include padding-app;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      
+      strong {
+         @include roboto-style(600, $text-secondary);
+         font-size: .75rem;
+         letter-spacing: 1.3px;
+      }
+      
+      .bookmark {
+         width: auto;
+         position: relative;
+         
+         img {
+            max-width: 24px;
+         }
+         
+         span {
+            @include grid-centering;
+            @include poppins-style(400, white);
+            position: absolute;
+            background: $bg-secondary;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            font-size: .4rem;
+            top: -5px;
+            right: -5px;
+         }
+      }
+   }
+   
+   .intro {
+      @include padding-app;
+      width: 100%;
+      
+      h3 {
+         @include poppins-style(600, $text-secondary);
+         font-size: 1rem;
+      }
+   }
+   
+   .search-wrapper {
+      @include padding-app;
+      width: 100%;
+      
+      .search-bar {
+         display: flex;
+         justify-content: space-between;
+         height: 2rem;
+         
+         input[type=text] {
+            width: 80%;
+            border-radius: 8px;
+            border: none;
+            background: $bg-secondary;
+            padding: 1rem;
+            font-size: .65rem;
+            @include poppins-style(400, $text-secondary);
+            
+            &:focus {
+               outline: none;
+               border: 1px solid $text-secondary;
+            }
+            
+            &::placeholder {
+               @include poppins-style(400, $text-secondary);
+            }
+         } 
+         
+         button[type=button] {
+            @include grid-centering;
+            width: 15%;
+            border-radius: 8px;
+            border: none;
+            background: $btn-main;
+            transition: .3s ease-in;
+            
+            &:active {
+               background: $bg-secondary;
+               color: $text-secondary;
+            }
+            
+            i {
+               font-size: .85rem;
+               color: $text-secondary;
+            }
+         }
+      }
+   }
+   
+   .category-wrapper {
+      @include padding-app;
+      width: 100%;
+      strong {   
+         @include poppins-style(400, $text-secondary);
+         font-size: .8rem;
+         width: 100%;
+      }
+      
+      .badge-wrapper {
+         width: 100%;
+         display: flex;
+         justify-content: space-around;
+         padding: 0;
+         
+         .active {
+            background: $bg-secondary!important;
+            border: 1px solid $text-secondary;
+         }
+         
+         .badge {
+            @include flex-centering;
+            background: rgba($bg-secondary, .45);
+            display: flex;
+            padding: .3rem .45rem;
+            border-radius: 16px;
+            margin-top: .5rem;
+            
+            &:not(:last-child) {
+               margin-right: .5rem;
+            }
+            
+            img {
+               width: 20%;
+               margin-right: .3rem;
+               
+            }
+            p {
+               font-size: .65rem;
+               @include poppins-style(400, $text-secondary);
+            }
+         }
+      }
+      
+   }
+   
+}
