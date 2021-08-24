@@ -1,4 +1,12 @@
-/* ./src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+   font-size: 24px;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   user-select: none;
+   color: black;
+}
+
+*::after, *::before {
+   display: block;
+}

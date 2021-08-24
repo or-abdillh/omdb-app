@@ -1,0 +1,16 @@
+{
+	"name": "Open Movie DB - Find your favorite movies",
+	"short_name": "OMDB App",
+	"start_url": "index.html",
+	"orientation": "potrait",
+	"display": "standalone",
+	"background": "#181823",
+	"theme_color": "#181823",
+	"icons": [
+		{
+			"src": "./src/assets/omdb-app.png",
+			"type": "image/png",
+			"sizes": "72x72"
+		}
+	]
+}
