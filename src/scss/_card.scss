@@ -1,0 +1,48 @@
+@import '_variabels';
+@import '_mixins';
+
+.card {
+   width: 46%;
+   border-radius: 12px;
+   overflow: hidden;
+   position: relative;
+   margin-bottom: .75rem;
+   
+   img {
+      max-width: 100%;
+      display: block;
+      line-height: 0;
+   }
+   
+   .card-footer {
+      @include padding-app;
+      @include flex-column-centering;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      background: rgba($bg-secondary, .65);
+      backdrop-filter: blur(4px);
+      
+      a {
+         text-decoration: none;
+         transition: .3s ease-in;
+         text-align: center;
+         
+         &:active {
+            letter-spacing: 1.5px;
+         }
+      }
+      
+      h3 {
+         @include poppins-style(500, $text-secondary);
+         font-size: .65rem;
+         margin-bottom: -.1rem;
+      }
+      
+      small {
+         @include poppins-style(300, rgba($text-secondary, .85));
+         font-size: .5rem;
+         margin-top: 0;
+      }
+   }
+}

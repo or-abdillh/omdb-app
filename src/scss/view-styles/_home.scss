@@ -101,6 +101,8 @@
    .category-wrapper {
       @include padding-app;
       width: 100%;
+      margin-bottom: 0;
+      
       strong {   
          @include poppins-style(400, $text-secondary);
          font-size: .8rem;
@@ -141,7 +143,19 @@
             }
          }
       }
-      
    }
-   
+   .card-wrapper {
+      @include padding-app;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+      strong {   
+         @include poppins-style(400, $text-secondary);
+         font-size: .65rem;
+         width: 100%;
+         margin-bottom: .75rem;
+      }
+   }
 }

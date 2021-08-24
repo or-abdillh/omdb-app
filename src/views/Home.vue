@@ -14,14 +14,18 @@
             favorite movies
          </h3>
       </div>
+      <!-- Search bar -->
       <div class="search-wrapper">
          <div class="search-bar">
-            <input type="text" placeholder="Type title here" />
-            <button type="button">
+            <input 
+            v-model="keyWord"
+            type="text" placeholder="Type title here" />
+            <button @click="getData" type="button">
                <i class="fa fa-search" ></i>
             </button>
          </div>
       </div>
+      <!-- Categorys -->
       <div class="category-wrapper">
          <strong>Categorys</strong>
          <div class="badge-wrapper">
@@ -36,12 +40,25 @@
             </template>
          </div>
       </div>
+      
+      <EmptyState :show-empty-state="showEmptyState" :is-empty-state="isEmptyState" ></EmptyState>
+      
+      <!-- Card components -->
+      <div v-if="response" class="card-wrapper">
+         <strong>Search results for '{{ keyWord }}'</strong>
+         <template v-for="item in response" :key="item.imdbID">
+            <Card :title="item.Title" :poster="item.Poster" :year="item.Year" :type="item.Type" ></Card>
+         </template>
+      </div>
    </section>
 </template>
-            
 
 <script>
 
+   import axios from 'axios'
+   import Card from '../components/Card.vue';
+   import EmptyState from '../components/EmptyState.vue';
+   
    export default {
       name: 'Home',
       data() {
@@ -51,10 +68,38 @@
                {name: 'Episode', id: 2},
                {name: 'Series', id: 3}
             ],
-            badgeActive: 'Movie'
+            badgeActive: 'Movie',
+            keyWord: '',
+            response: '',
+            responseStatus: 'true',
+            isEmptyState: true,
+            showEmptyState: true
          }
       },
-      components: {}
+      components: {
+         Card,
+         EmptyState
+      },
+      watch: {
+        responseStatus(val) {
+           if ( val === 'False' ) {
+              this.isEmptyState = false;
+              this.showEmptyState = true;
+           }  
+           else this.showEmptyState = false
+        } 
+      },
+      methods: {
+         getData() {
+            axios.
+               get('./response.json')
+                  .then( res =>  {
+                     this.response = res.data.Search
+                     this.responseStatus = res.data.Response
+                     })
+                  .catch( err => this.response = err)
+         }
+      }
    }
 
 </script>
