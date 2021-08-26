@@ -44,7 +44,7 @@
       <EmptyState :isLoad="isLoad" :show-empty-state="showEmptyState" :is-empty-state="isEmptyState" ></EmptyState>
       
       <!-- Card components -->
-      <div v-if="response" class="card-wrapper">
+      <div v-if="response && !isLoad" class="card-wrapper">
          <strong>Search results for '{{ keyWordText }}'</strong>
          <template v-for="item in response" :key="item.imdbID">
             <Card :title="item.Title" :poster="item.Poster" :id-movie="item.imdbID" :year="item.Year" :type="item.Type" ></Card>
@@ -54,9 +54,9 @@
 </template>
 
 <script>
-   import axios from 'axios';
-   import Card from '../components/Card.vue';
-   import EmptyState from '../components/EmptyState.vue';
+   import axios from 'axios'
+   import Card from '../components/Card.vue'
+   import EmptyState from '../components/EmptyState.vue'
    import API from '../apiKey.js'
    
    export default {
@@ -75,7 +75,7 @@
             responseStatus: 'true',
             isEmptyState: true,
             showEmptyState: true,
-            isLoad; false,
+            isLoad: false,
             errorMsg: null,
             key: API.omdb.key,
             endPoint: API.omdb.endPoint
@@ -88,8 +88,8 @@
       watch: {
         responseStatus(val) {
            if ( val === 'False' ) {
-              this.isEmptyState = false;
-              this.showEmptyState = true;
+              this.isEmptyState = false
+              this.showEmptyState = true
            }  
            else this.showEmptyState = false
         } 
