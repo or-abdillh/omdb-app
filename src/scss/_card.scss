@@ -22,6 +22,7 @@
       bottom: 0;
       background: rgba($bg-secondary, .65);
       backdrop-filter: blur(4px);
+      text-overflow: ellipsis;
       
       a {
          text-decoration: none;

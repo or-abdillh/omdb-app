@@ -1,0 +1,32 @@
+@import '../_variabels';
+@import '../_mixins';
+
+.details {
+   width: 100%;
+   margin-top: 1rem;
+   
+   .details-main-info {
+      @include flex-column-centering;
+      
+      img {
+         width: 50%;
+         border-radius: 12px;
+         margin-bottom: .5rem;
+      }
+      
+      strong {
+         @include poppins-style(600, $text-secondary);
+         font-size: .85rem;
+      }
+      
+      .details-flex {
+         width: 100%;
+         text-align: center;
+         
+         p {
+            @include poppins-style(400, rgba($text-secondary, .85));
+            font-size: .6rem;
+         }
+      }
+   }
+}

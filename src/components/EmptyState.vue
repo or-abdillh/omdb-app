@@ -67,7 +67,7 @@
          text-decoration: none;
          font-size: .7rem;
          background: $bg-secondary;
-         padding: .35rem;
+         padding: .4rem .35rem;
          border-radius: 16px;
          margin: .5rem auto 0;
          transition: .3s;

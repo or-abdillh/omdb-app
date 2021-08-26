@@ -1,0 +1,32 @@
+@import "./_variabels";
+@import "./_mixins";
+
+.nav {
+   @include padding-app;
+   width: 100%;
+   display: flex;
+   position: relative;
+   
+   .nav-back {
+      
+      i {
+         margin-right: .55rem;
+         color: $text-icon;
+         font-size: .85rem;
+      }
+      
+      strong {
+         @include poppins-style(500, $text-icon);
+         font-size: .85rem;
+      }
+   }
+   
+   .nav-title {
+      @include poppins-style(500, $text-secondary);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: .85rem;
+   }
+}
