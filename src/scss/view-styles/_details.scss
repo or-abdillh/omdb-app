@@ -25,7 +25,31 @@
          
          p {
             @include poppins-style(400, rgba($text-secondary, .85));
-            font-size: .6rem;
+            font-size: .55rem;
+         }
+      }
+   }
+   
+   .details-opt-info {
+      @include padding-app;
+      margin-top: .55rem;
+      
+      p {
+         
+         &:first-child {
+            @include poppins-style(400, rgba($text-secondary, .85));
+            font-size: .55rem;
+         }
+         
+         &:nth-child(3) {
+            @include poppins-style(400, rgba($text-secondary, .85));
+            font-size: .55rem;
+         }
+         
+         &:last-child, &:nth-child(2) {
+            @include poppins-style(400, white);
+            font-size: .65rem;
+            margin-bottom: .25rem;
          }
       }
    }

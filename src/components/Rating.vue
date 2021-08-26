@@ -67,13 +67,13 @@
       
       small {
          @include poppins-style(600, rgba($text-secondary, .85));
-         margin-right: .35rem;
+         margin-right: .25rem;
          font-size: .6rem;
       }
       
       .stars {
          i {
-            font-size: .6rem;
+            font-size: .55rem;
             color: $text-icon;
          }
       }
