@@ -8,6 +8,12 @@
       </div>
       <div v-if="!isEmptyState" class="content">
          <strong>Sorry, movie not found</strong>
+         <router-link to="/bookmark" class="button-to-bookmark" >
+            To bookmark
+         </router-link>
+      </div>
+      <div v-if="isLoad" class="content">
+         <strong>Please Wait</strong>
       </div>
    </div>
 </template>
@@ -24,6 +30,10 @@
          showEmptyState: {
             type: Boolean,
             default: true
+         }.
+         isLoad: {
+            type: Boolean,
+            default: false
          }
       }
    }

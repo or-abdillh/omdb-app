@@ -77,6 +77,12 @@
             }
          } 
          
+         a:active {
+            border: none;
+            background: $bg-secondary;
+            color: $text-secondary;
+         }
+         
          button[type=button] {
             @include grid-centering;
             width: 15%;

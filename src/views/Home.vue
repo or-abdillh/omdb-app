@@ -41,23 +41,23 @@
          </div>
       </div>
       
-      <EmptyState :show-empty-state="showEmptyState" :is-empty-state="isEmptyState" ></EmptyState>
+      <EmptyState :isLoad="isLoad" :show-empty-state="showEmptyState" :is-empty-state="isEmptyState" ></EmptyState>
       
       <!-- Card components -->
       <div v-if="response" class="card-wrapper">
-         <strong>Search results for '{{ keyWord }}'</strong>
+         <strong>Search results for '{{ keyWordText }}'</strong>
          <template v-for="item in response" :key="item.imdbID">
-            <Card :title="item.Title" :poster="item.Poster" :year="item.Year" :type="item.Type" ></Card>
+            <Card :title="item.Title" :poster="item.Poster" :id-movie="item.imdbID" :year="item.Year" :type="item.Type" ></Card>
          </template>
       </div>
    </section>
 </template>
 
 <script>
-
-   import axios from 'axios'
+   import axios from 'axios';
    import Card from '../components/Card.vue';
    import EmptyState from '../components/EmptyState.vue';
+   import API from '../apiKey.js'
    
    export default {
       name: 'Home',
@@ -70,10 +70,15 @@
             ],
             badgeActive: 'Movie',
             keyWord: '',
+            keyWordText: '',
             response: '',
             responseStatus: 'true',
             isEmptyState: true,
-            showEmptyState: true
+            showEmptyState: true,
+            isLoad; false,
+            errorMsg: null,
+            key: API.omdb.key,
+            endPoint: API.omdb.endPoint
          }
       },
       components: {
@@ -89,19 +94,45 @@
            else this.showEmptyState = false
         } 
       },
+      mounted(){
+        if (localStorage.getItem('listMovie_omdb')) {
+           this.response = JSON.parse(localStorage.getItem('listMovie_omdb'))
+           this.responseStatus = 'True'
+           this.keyWordText = localStorage.getItem('lastKeyWord_omdb')
+        }
+      },
       methods: {
          getData() {
+            const validKeyWord = this.keyWord.split(' ').join('+')
+            this.showLoader(true)
             axios.
-               get('./response.json')
+               get(`${this.endPoint}?apikey=${this.key}&s=${validKeyWord}&type=${this.badgeActive}`)
                   .then( res =>  {
                      this.response = res.data.Search
                      this.responseStatus = res.data.Response
+                     this.keyWordText = this.keyWord
+                     
+                     this.showLoader(false)
+                     
+                     if (this.responseStatus === 'True') {
+                        localStorage.setItem('listMovie_omdb', JSON.stringify(res.data.Search))
+                        localStorage.setItem('lastKeyWord_omdb', this.keyWord)
+                     }
+                     
                      })
-                  .catch( err => this.response = err)
+                  .catch( err => this.errorMsg = err)
+         },
+         showLoader(show) {
+            if (show) {   
+               this.showEmptyState = true
+               this.isLoad = true
+            } else {
+               this.showEmptyState = false
+               this.isLoad = false
+            }   
          }
       }
    }
-
 </script>
 
 <style lang="scss">

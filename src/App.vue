@@ -4,8 +4,7 @@
 
 <script>
    
-   export default {
-      name: 'Ap'
-   }
-   
 </script>
+
+<style>
+</style>
