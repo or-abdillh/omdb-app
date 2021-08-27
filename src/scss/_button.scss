@@ -15,7 +15,6 @@
             border-radius: 12px;
             border: none;
             transition: .3s;
-            
          }
          
          .button-bookmark-main {
@@ -25,6 +24,10 @@
             
             &:active {
                background: rgba($btn-main, .85);
+            }
+            
+            &:disabled {
+               background: rgba($btn-main, .55);
             }
          }
          

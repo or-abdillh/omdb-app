@@ -19,7 +19,7 @@
             {{ movie.Actors }} • {{ movie.Production }}
          </p>
       </div>
-      <Button></Button>
+      <Button :details-movie="movie"></Button>
    </section>
 </template>
 
@@ -39,18 +39,8 @@
       },
       data() {
          return {
-            data: '',
-            movie: {
-               Poster: '',
-               Title: '',
-               Year: '',
-               Genre: '',
-               Runtime: '',
-               Rating: '',
-               Plot: '',
-               Production: '',
-               Actors: ''
-            }
+            errResponse: false,
+            movie: {}
          }
       },
       mounted() {
@@ -58,6 +48,7 @@
             .then( res => {
                let movie = this.movie
                let info = res.data
+               movie.IdMovie = info.imdbID
                movie.Poster = info.Poster
                movie.Title = info.Title
                movie.Year = info.Year
@@ -67,8 +58,9 @@
                movie.Plot = info.Plot
                movie.Production = info.Production
                movie.Actors = info.Actors
+               movie.Type = info.Type
             })
-            .catch( err => this.data = err)
+            .catch( err => this.errResponse = true)
       }
    }
    
