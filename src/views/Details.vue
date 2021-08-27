@@ -19,6 +19,7 @@
             {{ movie.Actors }} • {{ movie.Production }}
          </p>
       </div>
+      <Button></Button>
    </section>
 </template>
 
@@ -27,12 +28,14 @@
    import axios from 'axios'
    import Nav from '../components/Nav.vue'
    import Rating from '../components/Rating.vue'
+   import Button from '../components/Button.vue'
    
    export default {
       name: 'Details',
       components: {
          Nav,
-         Rating
+         Rating,
+         Button
       },
       data() {
          return {

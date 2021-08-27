@@ -1,0 +1,44 @@
+@import './_variabels';
+@import './_mixins';
+
+.button-bookmark {
+      @include padding-app;
+      width: 100%;
+      
+      .button-bookmark-wrapper {
+         display: flex;
+         justify-content: space-between;
+         width: 100%;
+         
+         button {
+            padding: .45rem .35rem;
+            border-radius: 12px;
+            border: none;
+            transition: .3s;
+            
+         }
+         
+         .button-bookmark-main {
+            @include poppins-style(600, $text-secondary);
+            width: 75%;
+            background: $btn-main;
+            
+            &:active {
+               background: rgba($btn-main, .85);
+            }
+         }
+         
+         .button-share {
+            width: 20%;
+            background: $bg-secondary;
+            
+            i {
+               color: $text-secondary;
+            }
+            
+            &:active {
+               background: rgba($text-secondary, .85);
+            }
+         }
+      }
+   }
