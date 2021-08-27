@@ -19,6 +19,7 @@
          <div class="search-bar">
             <input 
             v-model="keyWord"
+            v-on:keyup.enter="getData"
             type="text" placeholder="Type title here" />
             <button @click="getData" type="button">
                <i class="fa fa-search" ></i>
@@ -31,7 +32,7 @@
          <div class="badge-wrapper">
             <template v-for="item in categorys" :key="item.id">
                <div 
-               @click="badgeActive = item.name" 
+               @click="badgeClick(item.name)" 
                :class="badgeActive === item.name ? 'active' : ''"
                class="badge"> 
                   <img src="src/assets/take-board-64.png" alt="" />
@@ -110,23 +111,26 @@
       methods: {
          getData() {
             const validKeyWord = this.keyWord.split(' ').join('+')
-            this.showLoader(true)
-            axios.
-               get(`${this.endPoint}?apikey=${this.key}&s=${validKeyWord}&type=${this.badgeActive}`)
-                  .then( res =>  {
-                     this.response = res.data.Search
-                     this.responseStatus = res.data.Response
-                     this.keyWordText = this.keyWord
-                     
-                     this.showLoader(false)
-                     
-                     if (this.responseStatus === 'True') {
-                        localStorage.setItem('listMovie_omdb', JSON.stringify(res.data.Search))
-                        localStorage.setItem('lastKeyWord_omdb', this.keyWord)
-                     }
-                     
-                     })
-                  .catch( err => this.errorMsg = err)
+            if (validKeyWord.split('').length > 0) {
+               
+               this.showLoader(true)
+               axios.
+                  get(`${this.endPoint}?apikey=${this.key}&s=${validKeyWord}&type=${this.badgeActive}`)
+                     .then( res =>  {
+                        this.response = res.data.Search
+                        this.responseStatus = res.data.Response
+                        this.keyWordText = this.keyWord
+                        
+                        this.showLoader(false)
+                        
+                        if (this.responseStatus === 'True') {
+                           localStorage.setItem('listMovie_omdb', JSON.stringify(res.data.Search))
+                           localStorage.setItem('lastKeyWord_omdb', this.keyWord)
+                        }
+                        
+                        })
+                     .catch( err => this.errorMsg = err)
+            }
          },
          showLoader(show) {
             if (show) {   
@@ -136,6 +140,10 @@
                this.showEmptyState = false
                this.isLoad = false
             }   
+         },
+         badgeClick(name) {
+            this.badgeActive = name
+            this.getData()
          }
       }
    }
