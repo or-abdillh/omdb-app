@@ -4,7 +4,7 @@
          <strong>OMDB</strong>
          <span class="bookmark">
             <img src="src/assets/bookmark-64.png"/>
-            <span>4</span>
+            <span>{{ bookmarkCount }}</span>
          </span>
       </div>
       <div class="intro">
@@ -68,6 +68,7 @@
                {name: 'Episode', id: 2},
                {name: 'Series', id: 3}
             ],
+            bookmarkCount: 0,
             badgeActive: 'Movie',
             keyWord: '',
             keyWordText: '',
@@ -95,10 +96,15 @@
         } 
       },
       mounted(){
-        if (localStorage.getItem('listMovie_omdb')) {
+        if ( localStorage.getItem('listMovie_omdb') ) {
            this.response = JSON.parse(localStorage.getItem('listMovie_omdb'))
            this.responseStatus = 'True'
            this.keyWordText = localStorage.getItem('lastKeyWord_omdb')
+        }
+        
+        if ( localStorage.getItem('listBookmark_omdb') ) {
+           let bookmark = JSON.parse(localStorage.getItem('listBookmark_omdb')).bookmark
+           this.bookmarkCount = bookmark.length
         }
       },
       methods: {
