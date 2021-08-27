@@ -4,8 +4,10 @@
 .nav {
    @include padding-app;
    width: 100%;
+   background: $bg-primary;
    display: flex;
-   position: relative;
+   position: fixed;
+   top: 0;
    
    .nav-back {
       

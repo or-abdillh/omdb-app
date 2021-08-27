@@ -1,6 +1,7 @@
 <template>
    <Nav nav-name="Details"></Nav>
-   <section class="details">
+   <Waiting :is-waiting="isWaiting"></Waiting>
+   <section v-if="!isWaiting" class="details">
       <div class="details-main-info">
          <img :src="movie.Poster" :alt="movie.Title" />
          <strong>{{ movie.Title }}</strong>
@@ -29,23 +30,33 @@
    import Nav from '../components/Nav.vue'
    import Rating from '../components/Rating.vue'
    import Button from '../components/Button.vue'
+   import Waiting from '../components/Waiting.vue'
+   import API from '../apiKey.js'
    
    export default {
       name: 'Details',
       components: {
          Nav,
          Rating,
-         Button
+         Button,
+         Waiting
       },
       data() {
          return {
             errResponse: false,
-            movie: {}
+            movie: {},
+            endPoint: API.omdb.endPoint,
+            key: API.omdb.key,
+            isWaiting: true,
          }
       },
       mounted() {
-         axios.get('../../details.json')
+         let idMovie = this.$route.params.idMovie
+         let url = `${this.endPoint}?apikey=${this.key}&i=${idMovie}`
+         
+         axios.get(url)
             .then( res => {
+               
                let movie = this.movie
                let info = res.data
                movie.IdMovie = info.imdbID
@@ -59,8 +70,10 @@
                movie.Production = info.Production
                movie.Actors = info.Actors
                movie.Type = info.Type
+               
+               this.isWaiting = false
             })
-            .catch( err => this.errResponse = true)
+            .catch( err => console.log(err))
       }
    }
    

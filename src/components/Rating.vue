@@ -15,7 +15,8 @@
       name: 'Rating',
       data() {
          return {
-            starArr: []
+            starArr: [],
+            info: ''
          }
       },
       props: {
@@ -26,20 +27,7 @@
       },
       watch: {
          rate(val) {
-            let maxStar = 5
-            let mainNum = val * .5
-            let lowerNum = parseInt(mainNum)
-            let upperNum = lowerNum + 1
             
-            this.pushStarVal('full', lowerNum)
-            maxStar = maxStar - lowerNum
-            
-            if ( mainNum > lowerNum && mainNum < upperNum) {
-               this.pushStarVal('half', 1)
-               maxStar = maxStar - 1
-            }
-            
-            this.pushStarVal('empty', maxStar)
          }
       },
       methods: {
@@ -53,6 +41,23 @@
             else if (str === 'half') return 'fas fa-star-half'
             else return 'far fa-star'
          }
+      },
+      mounted() {
+         this.info = 'watch'
+         let maxStar = 5
+         let mainNum = this.rate * .5
+         let lowerNum = parseInt(mainNum)
+         let upperNum = lowerNum + 1
+         
+         this.pushStarVal('full', lowerNum)
+         maxStar = maxStar - lowerNum
+         
+         if ( mainNum > lowerNum && mainNum < upperNum) {
+            this.pushStarVal('half', 1)
+            maxStar = maxStar - 1
+         }
+         
+         this.pushStarVal('empty', maxStar)
       }
    }
    
