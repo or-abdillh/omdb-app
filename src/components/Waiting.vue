@@ -46,9 +46,9 @@
          }
          
          i {
+            @include padding-app;
             color: $text-secondary;
             background: $bg-secondary;
-            padding: .5rem;
             width: 100%;
             border-radius: 8px;
             text-align: center;

@@ -2,10 +2,10 @@
    <section id="header-home">
       <div class="brand">
          <strong>OMDB</strong>
-         <span class="bookmark">
+         <router-link to="/bookmark" class="bookmark">
             <img src="src/assets/bookmark-64.png"/>
             <span>{{ bookmarkCount }}</span>
-         </span>
+         </router-link>
       </div>
       <div class="intro">
          <h3>

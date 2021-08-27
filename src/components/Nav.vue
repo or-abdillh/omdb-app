@@ -28,5 +28,4 @@
    
    @import "./src/scss/_nav";
    
-   
 </style>
