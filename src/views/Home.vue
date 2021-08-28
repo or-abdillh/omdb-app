@@ -35,7 +35,7 @@
                @click="badgeClick(item.name)" 
                :class="badgeActive === item.name ? 'active' : ''"
                class="badge"> 
-                  <img src="src/assets/take-board-64.png" alt="" />
+                  <img src="https://dl.dropbox.com/s/g35eijyruta8sv9/take-board-64.png?dl=2" alt="" />
                   <p>{{ item.name }}</p>
                </div>
             </template>
