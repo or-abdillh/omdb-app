@@ -21,8 +21,16 @@ Users can save their favorite movies into a bookmark list so they can be viewed 
 - Vite Js
 - Acode code editor
 
+### Install Vite JS
+- <code>npm init vite@latest</code>
+- [See documentation](vitejs.dev/guide/#scaffolding-your-first-vite-project)
+
 ### Clone this repo
+- <code>git clone https://github.com/or-abdillh/omdb-app.git </code>
 - <code>cd omdb-app</code>
+- <code>npm install</code>
+- <code>npm run dev</code>
+-  * if you get an error on esbuild not installed *, run this code before <code>npm run dev</code> : <code>node node_modules/esbuild/install.js</code> to install manually
 
 ### Demo 
 - Coming soon 🙏🏻
