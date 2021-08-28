@@ -8,7 +8,7 @@
 	"theme_color": "#181823",
 	"icons": [
 		{
-			"src": "./src/assets/omdb-app.png",
+			"src": "./src/assets/logo.png",
 			"type": "image/png",
 			"sizes": "72x72"
 		}
