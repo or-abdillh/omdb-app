@@ -1,5 +1,5 @@
 <h3 align="center">OMDB APP</h3>
-<p>Find your favorite movies</p>
+<p align="center">Find your favorite movies</p>
 
 <img src="src/assets/banner.png" width="100%" alt="">
 
@@ -10,16 +10,32 @@ with this application the user can search for information from a film based on t
 Users can save their favorite movies into a bookmark list so they can be viewed again quickly
 
 ### Languages and Tools
-• Vue Js
-• Vue router
-• Axios
-• SASS Preprocessor
-• OMDB API
-• Google Font
-• FontAwesome
-• Termux
-• Vite Js
-• Acode code editor
+- Vue Js
+- Vue router
+- Axios
+- SASS Preprocessor
+- OMDB API
+- Google Font
+- FontAwesome
+- Termux
+- Vite Js
+- Acode code editor
+
+### Install Vite JS
+- <code>npm init vite@latest</code>
+- [See documentation](vitejs.dev/guide/#scaffolding-your-first-vite-project)
+
+### Clone this repo
+- <code>git clone https://github.com/or-abdillh/omdb-app.git </code>
+- <code>cd omdb-app</code>
+- <code>npm install</code>
+- <code>npm run dev</code>
+- if you get an <b>error on esbuild</b> try to install manual, run this code before <code>npm run dev</code> : 
+- <code>node node_modules/esbuild/install.js</code> to install manually
 
 ### Demo 
-• Coming soon 🙏🏻
+- Coming soon 🙏🏻
+
+[Oka R Abdillah ](http://github.com/or-abdillh)
+<br>
+Last edited on : 28/8/2021

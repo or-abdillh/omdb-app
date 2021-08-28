@@ -3,7 +3,7 @@
       <div class="brand">
          <strong>OMDB</strong>
          <router-link to="/bookmark" class="bookmark">
-            <img src="./src/assets/bookmark-64.png"/>
+            <img src="https://dl.dropbox.com/s/s9fb1d9vughng58/bookmark-64.png?dl=2"/>
             <span>{{ bookmarkCount }}</span>
          </router-link>
       </div>
@@ -35,7 +35,7 @@
                @click="badgeClick(item.name)" 
                :class="badgeActive === item.name ? 'active' : ''"
                class="badge"> 
-                  <img src="src/assets/take-board-64.png" alt="" />
+                  <img src="https://dl.dropbox.com/s/g35eijyruta8sv9/take-board-64.png?dl=2" alt="" />
                   <p>{{ item.name }}</p>
                </div>
             </template>
