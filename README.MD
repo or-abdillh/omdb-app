@@ -10,16 +10,19 @@ with this application the user can search for information from a film based on t
 Users can save their favorite movies into a bookmark list so they can be viewed again quickly
 
 ### Languages and Tools
-• Vue Js
-• Vue router
-• Axios
-• SASS Preprocessor
-• OMDB API
-• Google Font
-• FontAwesome
-• Termux
-• Vite Js
-• Acode code editor
+- Vue Js
+- Vue router
+- Axios
+- SASS Preprocessor
+- OMDB API
+- Google Font
+- FontAwesome
+- Termux
+- Vite Js
+- Acode code editor
 
 ### Demo 
-• Coming soon 🙏🏻
+- Coming soon 🙏🏻
+
+[Oka R Abdillah ](http://github.com/or-abdillh)
+Last edited on : 28/8/2021
