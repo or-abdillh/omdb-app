@@ -3,7 +3,7 @@
       <div class="brand">
          <strong>OMDB</strong>
          <router-link to="/bookmark" class="bookmark">
-            <img src="./src/assets/bookmark-64.png"/>
+            <img src="https://dl.dropbox.com/s/s9fb1d9vughng58/bookmark-64.png?dl=2"/>
             <span>{{ bookmarkCount }}</span>
          </router-link>
       </div>
