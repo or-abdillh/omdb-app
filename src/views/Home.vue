@@ -28,7 +28,7 @@
       </div>
       <!-- Categorys -->
       <div class="category-wrapper">
-         <strong>Categorys</strong>
+         <strong>Categories</strong>
          <div class="badge-wrapper">
             <template v-for="item in categorys" :key="item.id">
                <div 
