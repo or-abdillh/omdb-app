@@ -1,5 +1,5 @@
 <h3 align="center">OMDB APP</h3>
-<p>Find your favorite movies</p>
+<p align="center">Find your favorite movies</p>
 
 <img src="src/assets/banner.png" width="100%" alt="">
 
@@ -20,6 +20,9 @@ Users can save their favorite movies into a bookmark list so they can be viewed 
 - Termux
 - Vite Js
 - Acode code editor
+
+### Clone this repo
+- <code>cd omdb-app</code>
 
 ### Demo 
 - Coming soon 🙏🏻
