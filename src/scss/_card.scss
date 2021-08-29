@@ -47,3 +47,21 @@
       }
    }
 }
+
+/* Medium screens - TABLET */
+@media only screen and (min-width: 40.063em) {
+   
+   .card {
+      width: 30%;
+      margin-bottom: 1.2rem;
+      
+      .card-footer {
+         h3 {
+            font-size: 1rem;
+         }
+         small {
+            font-size: .75rem;
+         }
+      }
+   }
+}

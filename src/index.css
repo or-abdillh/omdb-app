@@ -10,3 +10,13 @@
 *::after, *::before {
    display: block;
 }
+
+/* ROOT ELEMENT */
+/* Medium screens - TABLET */
+@media only screen and (min-width: 40.063em) and (max-width: 64.063em) {
+   
+   #app {
+      width: 85%;
+      margin: 0 auto;
+   }
+}
