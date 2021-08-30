@@ -15,6 +15,10 @@
             border-radius: 12px;
             border: none;
             transition: .3s;
+            
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+               padding: .65rem .55rem;
+            }
          }
          
          .button-bookmark-main {
@@ -23,7 +27,7 @@
             background: $btn-main;
             
             @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-               font-size: 1.35rem;
+               font-size: 1.75rem;
             } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
             
             &:active {
