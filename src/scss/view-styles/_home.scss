@@ -134,6 +134,10 @@
             border-radius: 16px;
             margin-top: .5rem;
             
+            @media only screen and (min-width: 64.063em) and (max-width: 90em) {
+               width: 100%;
+            }
+            
             &:not(:last-child) {
                margin-right: .5rem;
             }
@@ -167,8 +171,7 @@
 }
 
 /* Medium screens - TABLET */
-@media only screen and (min-width: 40.063em) and (max-width: 64.063em) 
-and (max-width: 90em) {
+@media only screen and (min-width: 40.063em) and (max-width: 64.063em)  {
    #header-home {
       padding: 1rem 1.5rem;
       

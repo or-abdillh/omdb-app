@@ -38,6 +38,7 @@
       width: 55%;
       margin: 0 auto;
       font-size: 36px;
+      position: relative;
    }
 } /* min-width 1025px, large screens */
  
@@ -47,6 +48,7 @@
       width: 50%;
       margin: 0 auto;
       font-size: 36px;
+      position: relative;
    }
 } /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
  
