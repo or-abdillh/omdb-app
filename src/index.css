@@ -12,11 +12,39 @@
 }
 
 /* ROOT ELEMENT */
+/* Break Point */
 /* Medium screens - TABLET */
-@media only screen and (min-width: 40.063em) and (max-width: 64.063em) {
+@media only screen and (min-width: 40.063em) {
    
    #app {
-      width: 85%;
+      width: 100%;
+      font-size: 24px;
+   }
+} /* min-width 641px, medium screens */
+ 
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+   
+   #app {
+      width: 80%;
       margin: 0 auto;
    }
-}
+} /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+@media only screen and (min-width: 64.063em) {
+   
+   #app {
+      width: 55%;
+      margin: 0 auto;
+      font-size: 36px;
+   }
+} /* min-width 1025px, large screens */
+ 
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+   
+   #app {
+      width: 50%;
+      margin: 0 auto;
+      font-size: 36px;
+   }
+} /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
+ 
