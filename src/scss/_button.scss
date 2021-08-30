@@ -22,6 +22,10 @@
             width: 75%;
             background: $btn-main;
             
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+               font-size: 1.35rem;
+            } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+            
             &:active {
                background: rgba($btn-main, .85);
             }
@@ -37,6 +41,10 @@
             
             i {
                color: $text-secondary;
+               
+               @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+                  font-size: 1.35rem;
+               } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
             }
             
             &:active {

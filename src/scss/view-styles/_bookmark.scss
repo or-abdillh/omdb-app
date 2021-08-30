@@ -5,6 +5,11 @@
    @include padding-app;
    width: 100%;
    margin-top: 2rem;
+   position: absolute;
+   
+   @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+      margin-top: 3rem;
+   } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
    
    .bookmark-empty {
       @include padding-app;
@@ -12,11 +17,19 @@
       text-align: center;
       margin: 2rem auto;
       
+      @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+         width: 55%;
+      } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+      
       strong {
          @include poppins-style(400, $text-secondary);
          font-size: .75rem;
          display: block;
          margin-bottom: .55rem;
+         
+         @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+            font-size: 1.2rem;
+         } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
       }
       
       i {
@@ -26,6 +39,10 @@
          font-size: 1rem;
          color: $text-secondary;
          border-radius: 16px;
+         
+         @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+            font-size: 1.55rem;
+         } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
       }
    }
    
@@ -36,6 +53,10 @@
       max-height: 100px;
       border-radius: 12px;
       margin-top: .45rem;
+      
+      @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+         max-height: 150px;
+      } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
       
       img {
          min-width: 100%;
@@ -60,11 +81,19 @@
             @include poppins-style(600, $text-secondary);
             font-size: .7rem;
             text-decoration: none;
+            
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+               font-size: 1.25rem;
+            } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
          }
          
          small {
             @include poppins-style(500, rgba($text-secondary, .85));
             font-size: .55rem;
+            
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+               font-size: 1.1rem;
+            } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
          }
          
          i {
@@ -76,6 +105,10 @@
             top: 50%;
             transform: translateY(-50%);
             transition: .3s;
+            
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+               font-size: 1.25rem;
+            } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
             
             &:active {
                color: rgba($text-icon, .5);

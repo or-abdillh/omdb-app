@@ -74,12 +74,21 @@
          @include poppins-style(600, rgba($text-secondary, .85));
          margin-right: .25rem;
          font-size: .6rem;
+         
+         @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+            font-size: 1.1rem;
+            margin-right: .45rem;
+         } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
       }
       
       .stars {
          i {
             font-size: .55rem;
             color: $text-icon;
+            
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+               font-size: 1.05rem;
+            } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
          }
       }
    }

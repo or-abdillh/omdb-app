@@ -27,6 +27,8 @@
    #app {
       width: 80%;
       margin: 0 auto;
+      position: relative;
+ 
    }
 } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 

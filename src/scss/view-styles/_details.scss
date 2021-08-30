@@ -6,6 +6,10 @@
    margin-top: 1rem;
    padding-top: 2rem;
    
+   @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+      padding-top: 4rem;
+   } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+   
    .details-main-info {
       @include flex-column-centering;
       
@@ -18,6 +22,11 @@
       strong {
          @include poppins-style(600, $text-secondary);
          font-size: .85rem;
+         
+         @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+            
+            font-size: 1.35rem;
+         } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
       }
       
       .details-flex {
@@ -27,6 +36,10 @@
          p {
             @include poppins-style(400, rgba($text-secondary, .85));
             font-size: .55rem;
+            
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+               font-size: 1.05rem;
+            } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
          }
       }
    }
