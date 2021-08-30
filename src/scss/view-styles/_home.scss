@@ -170,8 +170,8 @@
    }
 }
 
-/* Medium screens - TABLET */
-@media only screen and (min-width: 40.063em) and (max-width: 64.063em)  {
+/* Medium screens - TABLET DESKTOP LARGE SCREEN */
+@media only screen and (min-width: 40.063em) and (max-width: 64.063em) and (max-width: 120em)  {
    #header-home {
       padding: 1rem 1.5rem;
       

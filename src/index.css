@@ -42,7 +42,7 @@
    }
 } /* min-width 1025px, large screens */
  
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+@media only screen and (min-width: 64.063em) and (max-width: 90em) and (max-width: 120em) {
    
    #app {
       width: 50%;
