@@ -7,7 +7,7 @@
    margin-top: 2rem;
    position: absolute;
    
-   @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) {
+   @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width 90em) and (max-width: 120em) {
       margin-top: 3rem;
    } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
    
@@ -17,7 +17,7 @@
       text-align: center;
       margin: 2rem auto;
       
-      @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) {
+      @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) and (max-width: 120em) {
          width: 55%;
       } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
       
@@ -27,7 +27,7 @@
          display: block;
          margin-bottom: .55rem;
          
-         @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) {
+         @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) and (max-width: 120em) {
             font-size: 1.2rem;
          } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
       }
@@ -40,7 +40,7 @@
          color: $text-secondary;
          border-radius: 16px;
          
-         @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) {
+         @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) and (max-width: 120em) {
             font-size: 1.55rem;
          } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
       }
@@ -54,7 +54,7 @@
       border-radius: 12px;
       margin-top: .45rem;
       
-      @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) {
+      @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) and (max-width: 120em) {
          max-height: 150px;
       } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
       
@@ -82,7 +82,7 @@
             font-size: .7rem;
             text-decoration: none;
             
-            @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) {
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) and (max-width: 120em) {
                font-size: 1.25rem;
             } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
          }
@@ -91,7 +91,7 @@
             @include poppins-style(500, rgba($text-secondary, .85));
             font-size: .55rem;
             
-            @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) {
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) and (max-width: 120em) {
                font-size: 1.1rem;
             } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
          }
@@ -106,7 +106,7 @@
             transform: translateY(-50%);
             transition: .3s;
             
-            @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) and (max-width: 120em) {
                font-size: 1.25rem;
             } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
             

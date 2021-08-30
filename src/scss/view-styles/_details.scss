@@ -6,7 +6,7 @@
    margin-top: 1rem;
    padding-top: 2rem;
    
-   @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+   @media only screen and (min-width: 40.063em) and (max-width: 64em) (max-width 90em) and (max-width: 120em) {
       padding-top: 4rem;
    } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
    
@@ -23,7 +23,7 @@
          @include poppins-style(600, $text-secondary);
          font-size: .85rem;
          
-         @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) {
+         @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width 90em) and (max-width: 120em) {
             
             font-size: 1.55rem;
          } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
@@ -37,7 +37,7 @@
             @include poppins-style(400, rgba($text-secondary, .85));
             font-size: .55rem;
             
-            @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width: 90em) {
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width 90em) and (max-width: 120em) {
                font-size: 1.05rem;
             } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
          }
