@@ -38,7 +38,7 @@ Test via [Am I Responsive](http://ami.responsivedesign.is/)
 - <code>node node_modules/esbuild/install.js</code> to install manually
 
 ### Demo 
-- [OMDB APP](https://omdb-app-hazel.vercel.app.com)
+- [OMDB APP](https://omdb-app-hazel.vercel.app/)
 
 [Oka R Abdillah ](http://github.com/or-abdillh)
 <br>
