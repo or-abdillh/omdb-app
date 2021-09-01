@@ -21,9 +21,13 @@ Users can save their favorite movies into a bookmark list so they can be viewed 
 - Vite Js
 - Acode code editor
 
+### Responsive Test
+<img src="src/assets/banner-2.png" width="100%" alt="">
+- Test via [Am I Responsive](http://ami.responsivedesign.is/?url=https%3A%2F%2Fomdb-app-hazel.vercel.app#)
+
 ### Install Vite JS
 - <code>npm init vite@latest</code>
-- [See documentation](vitejs.dev/guide/#scaffolding-your-first-vite-project)
+- [See documentation](vitejs.dev/guide)
 
 ### Clone this repo
 - <code>git clone https://github.com/or-abdillh/omdb-app.git </code>
@@ -34,8 +38,8 @@ Users can save their favorite movies into a bookmark list so they can be viewed 
 - <code>node node_modules/esbuild/install.js</code> to install manually
 
 ### Demo 
-- Coming soon 🙏🏻
+- [OMDB APP](https://omdb-app-hazel.vercel.app.com)
 
 [Oka R Abdillah ](http://github.com/or-abdillh)
 <br>
-Last edited on : 28/8/2021
+Last edited on : 01/9/2021
