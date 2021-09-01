@@ -27,9 +27,9 @@ Test via [Am I Responsive](http://ami.responsivedesign.is/)
 
 ### Install Vite JS
 - <code>npm init vite@latest</code>
-- [See documentation](vitejs.dev/guide)
+- [See documentation](https://vitejs.dev/guide/)
 
-### Clone this repo
+### Clone This Repo
 - <code>git clone https://github.com/or-abdillh/omdb-app.git </code>
 - <code>cd omdb-app</code>
 - <code>npm install</code>
