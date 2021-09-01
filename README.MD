@@ -22,7 +22,7 @@ Users can save their favorite movies into a bookmark list so they can be viewed 
 - Acode code editor
 
 ### Responsive Test
-<img src="src/assets/banner-2.png" width="100%" alt="">
+<img src="src/assets/banner-2.jpg" width="100%" alt="">
 - Test via [Am I Responsive](http://ami.responsivedesign.is/?url=https%3A%2F%2Fomdb-app-hazel.vercel.app#)
 
 ### Install Vite JS
