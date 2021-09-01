@@ -16,7 +16,7 @@
             border: none;
             transition: .3s;
             
-            @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width 90em) and (max-width: 120em) {
+            @media only screen and (min-width: 40.063em) and (max-width: 120em) {
                padding: .65rem .55rem;
             }
          }
@@ -26,7 +26,7 @@
             width: 75%;
             background: $btn-main;
             
-            @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width 90em) and (max-width: 120em) {
+            @media only screen and (min-width: 40.063em) and (max-width: 120em) {
                font-size: 1.75rem;
             } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
             
@@ -46,7 +46,7 @@
             i {
                color: $text-secondary;
                
-               @media only screen and (min-width: 40.063em) and (max-width: 64em) and (max-width 90em) and (max-width: 120em) {
+               @media only screen and (min-width: 40.063em) and (max-width: 120em) {
                   font-size: 1.35rem;
                } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
             }
